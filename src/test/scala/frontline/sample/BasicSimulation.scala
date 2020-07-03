@@ -24,6 +24,8 @@ val scn = scenario("My Scenario")
       .get("http://google.com")
   ) 
 
+  
+//setUp(scn.inject(rampUsers(10) during (600 seconds))).protocols(httpConf)
 setUp(scn.inject(atOnceUsers(100)).protocols(httpProtocol))
 
      
