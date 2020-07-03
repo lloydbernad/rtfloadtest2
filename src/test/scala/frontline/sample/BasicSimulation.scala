@@ -24,7 +24,7 @@ val scn = scenario("My Scenario")
       .get("http://budweiserapi.rewardthefan.com/budweiserapi/TestClientSaaSConfig.json?cuId=lloyd&clId=AMIT202020")
   ) 
 
-setUp(scn.inject(atOnceUsers(1)).protocols(httpProtocol))
+setUp(scn.inject(atOnceUsers(100)).protocols(httpProtocol))
 
      
 }
