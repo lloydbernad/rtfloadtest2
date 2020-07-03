@@ -11,7 +11,8 @@ import io.gatling.http.Predef._
 import scala.concurrent.duration._
 
 class BasicSimulation extends Simulation {
-  
+ 
+  /**
   val httpProtocol = http.baseUrl("http://budweiserapi.rewardthefan.com")
 
 val scn = scenario("My Scenario")
@@ -25,6 +26,20 @@ val scn = scenario("My Scenario")
   ) 
 
 setUp(scn.inject(atOnceUsers(100)).protocols(httpProtocol))
+**/
+  
+   val httpProtocol = http.baseUrl("https://www.google.com")
 
+val scn = scenario("My Scenario")
+  .exec(
+    http("My Request")
+      .get("/")
+  ) 
+  .exec(
+    http("My Other Request")
+      .get(""https://www.google.com")
+  ) 
+  
+  setUp(scn.inject(atOnceUsers(100)).protocols(httpProtocol))
      
 }
