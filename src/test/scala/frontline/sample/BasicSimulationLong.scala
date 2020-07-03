@@ -13,16 +13,16 @@ import scala.concurrent.duration._
 class BasicSimulationLong extends Simulation {
 
   val httpConf = http
-    .baseUrl("http://computer-database.gatling.io")
+    .baseUrl("http://google.com)
 
   val scn = scenario("scenario1")
     .exec(
       http("Page 0")
-        .get("/computers?p=0")
+        .get("/")
     )
     .exec(
       http("Page 1")
-        .get("/computers?p=1")
+        .get("/")
     )
 
   setUp(
