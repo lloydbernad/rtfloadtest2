@@ -11,17 +11,12 @@ import io.gatling.http.Predef._
 import scala.concurrent.duration._
 
 class BasicSimulation extends Simulation {
-
-   private val httpConf = http
-    .baseURL("https://budweiserapi.rewardthefan.com")
-    .acceptHeader(" application/json")
-
-  private val scn: ScenarioBuilder = scenario("Initial Scenario")
-    .exec(http("Get all posts")
-    .get("/budweiserapi/TestClientSaaSConfig.json?cuId=lloyd&clId=AMIT202020"))
+  
+  private val httpConf = http.baseURL("https://budweiserapi.rewardthefan.com").acceptHeader("application/json")
+  private val scn: ScenarioBuilder = scenario("Initial Scenario").exec(http("Get all posts").get("/budweiserapi/TestClientSaaSConfig.json?cuId=lloyd&clId=AMIT202020"))
 
   setUp(
-    scn.inject(atOnceUsers(1))
-  ).protocols(httpConf) 
+    scn.inject(atOnceUsers(100))
+  ).protocols(httpConf)
      
 }
