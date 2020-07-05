@@ -17,11 +17,11 @@ class BasicSimulation extends Simulation {
 val scn = scenario("My Scenario")
   .exec(
     http("HTTP Request")
-      .get("budweiserapi/GetClientSaaSConfig.json?cuId=lloyd&clId=DEM2020BUDWEISER0620")
+      .get("budweiserapi/GetClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0620")
   ) 
   .exec(
     http("HTTPS  Request")
-      .get("https://budweiserapi.rewardthefan.com/budweiserapi/GetClientSaaSConfig.json?cuId=tamil&clId=DEM2020BUDWEISER0620")
+      .get("https://budweiserapi.rewardthefan.com/budweiserapi/GetClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0620")
   ) 
 
   
