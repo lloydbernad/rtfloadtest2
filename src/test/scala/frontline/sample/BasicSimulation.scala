@@ -16,12 +16,12 @@ class BasicSimulation extends Simulation {
 
 val scn = scenario("My Scenario")
   .exec(
-    http("My Request")
+    http("HTTP Request")
       .get("budweiserapi/TestClientSaaSConfig.json?cuId=lloyd&clId=AMIT202020")
   ) 
   .exec(
-    http("My Other Request")
-      .get("budweiserapi/TestClientSaaSConfig.json?cuId=tamil&clId=AMIT202020")
+    http("HTTPS  Request")
+      .get("http://budweiserapi.rewardthefan.com/budweiserapi/TestClientSaaSConfig.json?cuId=tamil&clId=AMIT202020")
   ) 
 
   
