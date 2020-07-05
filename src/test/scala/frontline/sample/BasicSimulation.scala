@@ -26,7 +26,7 @@ val scn = scenario("My Scenario")
 
   
 // setUp(scn.inject(rampUsers(10) during (900 seconds))).protocols(httpConf)
- setUp(scn.inject(atOnceUsers(10000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(10)).protocols(httpProtocol))
   
 // setUp(scn.inject(rampUsers(100) during (100 seconds))).protocols(httpConf)
 
