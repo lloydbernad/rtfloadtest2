@@ -21,7 +21,7 @@ val scn = scenario("My Scenario")
   ) 
   .exec(
     http("HTTPS  Request")
-      .get("http://budweiserapi.rewardthefan.com/budweiserapi/TestClientSaaSConfig.json?cuId=tamil&clId=AMIT202020")
+      .get("https://budweiserapi.rewardthefan.com/budweiserapi/TestClientSaaSConfig.json?cuId=tamil&clId=AMIT202020")
   ) 
 
   
