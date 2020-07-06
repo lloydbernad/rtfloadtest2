@@ -19,14 +19,14 @@ val scn = scenario("My Scenario")
     http("HTTP Request")
       .get("budweiserapi/GetClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0620")
   ) 
-  .exec(
-    http("HTTPS  Request")
-      .get("https://budweiserapi.rewardthefan.com/budweiserapi/GetClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0620")
-  ) 
+//  .exec(
+//    http("HTTPS  Request")
+//      .get("https://budweiserapi.rewardthefan.com/budweiserapi/GetClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0620")
+//  ) 
 
   
 // setUp(scn.inject(rampUsers(10) during (900 seconds))).protocols(httpConf)
- setUp(scn.inject(atOnceUsers(20000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(10000)).protocols(httpProtocol))
   
 // setUp(scn.inject(rampUsers(100) during (100 seconds))).protocols(httpConf)
 
