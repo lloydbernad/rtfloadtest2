@@ -12,20 +12,18 @@ import scala.concurrent.duration._
 
 class BasicSimulationLong extends Simulation {
 
+ 
   val httpConf = http
-    .baseUrl("http://google.com")
+    .baseUrl("http://budweiserapi.rewardthefan.com")
 
-  val scn = scenario("scenario1")
+  val scn = scenario("http-load")
     .exec(
-      http("Page 0")
-        .get("/")
+      http("TestConfig")
+        .get("/budweiserapi/TestClientSaaSConfig.json?cuId=lloyd&clId=AMIT202020")
     )
-    .exec(
-      http("Page 1")
-        .get("/")
-    )
+  
 
   setUp(
-    scn.inject(rampUsers(10) during (1800 seconds))
+    scn.inject(rampUsers(100) during (900 seconds))
   ).protocols(httpConf)
 }
