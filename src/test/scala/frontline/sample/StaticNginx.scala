@@ -11,7 +11,7 @@ class StaticNginx extends Simulation {
 val scn = scenario("My NGINX")
   .exec(
     http("HTTP Request")
-      .get("budweiserapi/TestClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0620")
+      .get("staticnginx/")
   ) 
 
  setUp(scn.inject(atOnceUsers(1000000)).protocols(httpProtocol))
