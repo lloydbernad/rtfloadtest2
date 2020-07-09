@@ -6,8 +6,8 @@ import scala.concurrent.duration._
 
 class StaticNginx extends Simulation {
 
- // val httpProtocol = http.baseUrl("http://budweiserapi.rewardthefan.com/")
-  val httpProtocol = http.baseUrl("http://54.198.109.188/")
+  val httpProtocol = http.baseUrl("http://budweiserapi.rewardthefan.com/")
+//  val httpProtocol = http.baseUrl("http://54.198.109.188/")
   
 
 val scn = scenario("My NGINX")
