@@ -10,7 +10,7 @@ class StaticNginx extends Simulation {
 //  val httpProtocol = http.baseUrl("http://54.198.109.188/")
   
 
-val scn = scenario("My NGINX")
+val scn = scenario("10 lac")
   .exec(
     http("HTTP Request")
       .get("staticnginx/")
