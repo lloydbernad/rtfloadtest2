@@ -10,11 +10,11 @@ class StaticNginx extends Simulation {
 //  val httpProtocol = http.baseUrl("http://54.198.109.188/")
   
 
-val scn = scenario("10 lac")
+val scn = scenario("5 lac")
   .exec(
     http("HTTP Request")
       .get("staticnginx/")
   ) 
 
- setUp(scn.inject(atOnceUsers(2000000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(500000)).protocols(httpProtocol))
 }
