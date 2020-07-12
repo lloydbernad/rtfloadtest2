@@ -12,7 +12,7 @@ import scala.concurrent.duration._
 
 class BasicSimulation extends Simulation {
 
-  val httpProtocol = http.baseUrl("http://budweiserapi.rewardthefan.com/")
+  val httpProtocol = http.baseUrl("http://clapi.rewardthefan.com/")
 
 val scn = scenario("My Scenario")
   .exec(
