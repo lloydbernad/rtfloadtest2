@@ -6,6 +6,7 @@ import scala.concurrent.duration._
 
 class StaticNginx extends Simulation {
 
+  
   val httpProtocol = http.baseUrl("http://clapi.rewardthefan.com/")
 //  val httpProtocol = http.baseUrl("http://54.198.109.188/")
   
