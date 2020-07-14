@@ -10,7 +10,7 @@ import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import scala.concurrent.duration._
 
-class SaasConfig extends Simulation {
+class DB extends Simulation {
 
   val httpProtocol = http.baseUrl("http://clapi.rewardthefan.com/")
 
