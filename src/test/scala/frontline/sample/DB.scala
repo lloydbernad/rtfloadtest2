@@ -17,7 +17,7 @@ class DB extends Simulation {
 val scn = scenario("DB")
   .exec(
     http("HTTP Request")
-      .get("budweiserapi/GettClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0620")
+      .get("budweiserapi/GetClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0620")
   ) 
 
  setUp(scn.inject(atOnceUsers(200000)).protocols(httpProtocol))
