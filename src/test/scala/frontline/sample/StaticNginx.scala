@@ -17,5 +17,5 @@ val scn = scenario("5 lac")
       .get("https://clapi.rewardthefan.com/staticnginx/")
   ) 
 
- setUp(scn.inject(atOnceUsers(100)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(1000000)).protocols(httpProtocol))
 }
