@@ -20,5 +20,5 @@ val scn = scenario("DB")
       .get("budweiserapi/GetClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0620")
   ) 
 
- setUp(scn.inject(atOnceUsers(100000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(110000)).protocols(httpProtocol))
 }
