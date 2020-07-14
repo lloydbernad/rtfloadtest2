@@ -14,8 +14,8 @@ class StaticNginx extends Simulation {
 val scn = scenario("5 lac")
   .exec(
     http("HTTP Request")
-      .get("https://clapi.rewardthefan.com/staticnginx/")
+      .get("staticnginx/")
   ) 
 
- setUp(scn.inject(atOnceUsers(1000000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(400000)).protocols(httpProtocol))
 }
