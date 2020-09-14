@@ -17,8 +17,8 @@ class BasicSimulation extends Simulation {
 val scn = scenario("My Scenario")
   .exec(
     http("HTTP Request")
-      .get("budweiserapi/TestClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0620")
+      .get("budweiserapi/TempCacheClientSaaSConfig.json?cuId=00&clId=AMIT202002CID")
   ) 
 
- setUp(scn.inject(atOnceUsers(400000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(4000)).protocols(httpProtocol))
 }
