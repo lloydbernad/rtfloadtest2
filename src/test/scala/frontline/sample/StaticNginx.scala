@@ -17,5 +17,5 @@ val scn = scenario("500 thousand")
       .get("staticnginx/")
   ) 
 
- setUp(scn.inject(atOnceUsers(200000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(600000)).protocols(httpProtocol))
 }
