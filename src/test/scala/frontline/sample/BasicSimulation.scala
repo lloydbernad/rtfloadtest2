@@ -14,9 +14,9 @@ class BasicSimulation extends Simulation {
 
   val httpProtocol = http.baseUrl("https://clapi.rewardthefan.com/")
 
-val scn = scenario("My Scenario")
+val scn = scenario("DB INSERT-READ")
   .exec(
-    http("HTTP Request")
+    http("SAASCONFIG-API")
       .get("budweiserapi/TempCacheClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0620")
   ) 
 
