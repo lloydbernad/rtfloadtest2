@@ -20,5 +20,5 @@ val scn = scenario("My Scenario")
       .get("budweiserapi/TempCacheClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0620")
   ) 
 
- setUp(scn.inject(atOnceUsers(700000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(800000)).protocols(httpProtocol))
 }
