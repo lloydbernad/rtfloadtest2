@@ -20,5 +20,5 @@ val scn = scenario("DB INSERT-READ")
       .get("budweiserapi/TempClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0620")
   ) 
 
- setUp(scn.inject(atOnceUsers(400000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(500000)).protocols(httpProtocol))
 }
