@@ -17,8 +17,8 @@ class BasicSimulation extends Simulation {
 val scn = scenario("DB INSERT-READ")
   .exec(
     http("SAASCONFIG-API")
-      .get("budweiserapi/TempClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0620")
+      .get("budweiserapi/TempClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0629")
   ) 
 
- setUp(scn.inject(atOnceUsers(10000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(1500000)).protocols(httpProtocol))
 }
