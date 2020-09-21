@@ -17,7 +17,7 @@ class ReadCustomerNormal extends Simulation {
 val scn = scenario("DB INSERT-READ")
   .exec(
     http("SAASCONFIG-API")
-      .get("budweiserapi/TempClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0620")
+      .get("budweiserapi/TempTrackingReadNormal.json?cuId=00&clId=DEM2020BUDWEISER0629")
   ) 
 
  setUp(scn.inject(atOnceUsers(20000)).protocols(httpProtocol))
