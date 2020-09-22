@@ -20,5 +20,5 @@ val scn = scenario("DB INSERT-READ")
       .get("budweiserapi/TempTrackingWritePstatmnt.json?cuId=00&clId=DEM2020BUDWEISER0629")
   ) 
 
- setUp(scn.inject(atOnceUsers(1500000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(2000)).protocols(httpProtocol))
 }
