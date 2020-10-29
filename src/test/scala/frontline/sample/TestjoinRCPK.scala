@@ -10,7 +10,7 @@ import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import scala.concurrent.duration._
 
-class BasicSimulation extends Simulation {
+class TestjoinRCPK extends Simulation {
 
   val httpProtocol = http.baseUrl("https://clapi.rewardthefan.com/")
 
