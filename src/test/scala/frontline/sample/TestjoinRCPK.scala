@@ -14,11 +14,11 @@ class BasicSimulation extends Simulation {
 
   val httpProtocol = http.baseUrl("https://clapi.rewardthefan.com/")
 
-val scn = scenario("DB INSERT-READ")
+val scn = scenario("JOIN CONTEST RCPK")
   .exec(
-    http("SAASCONFIG-API")
-      .get("budweiserapi/TempClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0629")
+    http("JOIN CONTEST RCPK")
+      .get("budweiserapi/livtJoinContestRCPK.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259")
   ) 
 
- setUp(scn.inject(atOnceUsers(1500000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(1000)).protocols(httpProtocol))
 }
