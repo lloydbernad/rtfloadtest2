@@ -1,4 +1,4 @@
-*
+/*
  * Copyright 2011-2018 GatlingCorp (https://gatling.io)
  *
  * All rights reserved.
