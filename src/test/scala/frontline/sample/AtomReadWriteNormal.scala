@@ -20,5 +20,5 @@ val scn = scenario("ATOMIC READ WRITE")
       .get("budweiserapi/livtJoinContesttesttrackatomRW.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259")
   ) 
 
- setUp(scn.inject(atOnceUsers(1000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(2000000)).protocols(httpProtocol))
 }
