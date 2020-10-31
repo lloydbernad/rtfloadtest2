@@ -17,7 +17,7 @@ class AtomReadWriteNormal extends Simulation {
 val scn = scenario("ATOMIC READ WRITE")
   .exec(
     http("ATOMIC READ WRITE")
-      .get("budweiserapi/livtJoinContesttesttrackatomRWstr.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259")
+      .get("budweiserapi/livtJoinContestRCPKatom.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259")
   ) 
 
  setUp(scn.inject(atOnceUsers(1000000)).protocols(httpProtocol))
