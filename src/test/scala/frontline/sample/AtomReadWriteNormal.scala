@@ -14,9 +14,11 @@ class AtomReadWriteNormal extends Simulation {
 
   val httpProtocol = http.baseUrl("https://clapi.rewardthefan.com/")
 //livtJoinContestrcpk1rdwr2.json
-val scn = scenario("ATOMIC READ WRITE")
+//livtJoinContestrcpkcustdb2rdwr2.json
+//livtJoinContestrcpkcustcache1rdwr2.json
+val scn = scenario("JOIN READ WRITE")
   .exec(
-    http("ATOMIC READ WRITE")
+    http("JOIN READ WRITE")
       .get("budweiserapi/livtJoinContestrcpk1rdwr2.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259")
   ) 
 
