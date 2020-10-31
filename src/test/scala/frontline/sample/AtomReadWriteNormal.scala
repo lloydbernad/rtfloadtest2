@@ -10,15 +10,15 @@ import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import scala.concurrent.duration._
 
-class BasicSimulation extends Simulation {
+class AtomReadWriteNormal extends Simulation {
 
   val httpProtocol = http.baseUrl("https://clapi.rewardthefan.com/")
 
-val scn = scenario("DB INSERT-READ")
+val scn = scenario("ATOMIC READ WRITE")
   .exec(
-    http("SAASCONFIG-API")
-      .get("budweiserapi/TempClientSaaSConfig.json?cuId=00&clId=DEM2020BUDWEISER0629")
+    http("ATOMIC READ WRITE")
+      .get("budweiserapi/livtJoinContesttesttrackatomRW?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259")
   ) 
 
- setUp(scn.inject(atOnceUsers(1500000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(1000)).protocols(httpProtocol))
 }
