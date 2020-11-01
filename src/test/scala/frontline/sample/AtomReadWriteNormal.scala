@@ -24,5 +24,5 @@ val httpProtocol = http.baseUrl("https://clapi.rewardthefan.com/")
       .get("budweiserapi/livtJoinContestrcpk1rdwr2.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259")
   ) 
 
- setUp(scn.inject(atOnceUsers(1000000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(1500000)).protocols(httpProtocol))
 }
