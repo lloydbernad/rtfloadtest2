@@ -17,11 +17,12 @@ val httpProtocol = http.baseUrl("https://clapi.rewardthefan.com/")
 //livtJoinContestrcpkcustdb2rdwr2.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259
 //livtJoinContestrcpkcustcache1rdwr2.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259
 //livtContValidateAnsrcpk3wr.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259&ans=A&qNo=1&qId=286&qenck=111111
-val scn = scenario("VAL ANS READ WRITE")
+//livtContValidateAnsrcpk3wr.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259&ans=A&qNo=1&qId=286&qenck=111111
+  val scn = scenario("VAL ANS READ WRITE")
   .exec(
     http("VAL ANS READ WRITE")
-      .get("budweiserapi/livtContValidateAnsrcpk3wr.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259&ans=A&qNo=1&qId=286&qenck=111111")
+      .get("budweiserapi/livtJoinContestrcpk1rdwr2.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259")
   ) 
 
- setUp(scn.inject(atOnceUsers(1000000)).protocols(httpProtocol))
+ setUp(scn.inject(atOnceUsers(3000000)).protocols(httpProtocol))
 }
