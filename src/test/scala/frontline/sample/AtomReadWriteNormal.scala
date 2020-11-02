@@ -13,6 +13,8 @@ import scala.concurrent.duration._
 class AtomReadWriteNormal extends Simulation {
 
 val httpProtocol = http.baseUrl("https://clapi.rewardthefan.com/")
+  
+  //livtContValidateAnsrcpk3wr.json
 //livtJoinContestrcpk1rdwr2.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259
 //livtJoinContestrcpkcustdb2rdwr2.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259
 //livtJoinContestrcpkcustcache1rdwr2.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259
@@ -21,7 +23,7 @@ val httpProtocol = http.baseUrl("https://clapi.rewardthefan.com/")
   val scn = scenario("VAL ANS READ WRITE")
   .exec(
     http("VAL ANS READ WRITE")
-      .get("budweiserapi/livtJoinContestrcpk1rdwr2.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259")
+      .get("budweiserapi/livtContValidateAnsrcpk3wr.json?cuId=00&clId=DEM2020BUDWEISER0629&coId=DEM2020BUDWEISER06291603914063259&ans=A&qNo=1&qId=286&qenck=111111")
   ) 
 
  setUp(scn.inject(atOnceUsers(1500000)).protocols(httpProtocol))
